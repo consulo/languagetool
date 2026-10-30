@@ -16,6 +16,7 @@ def run(*command):
 def refresh():
     if os.environ.get('JAVA_HOME'):
         os.environ['PATH'] = str(Path(os.environ['JAVA_HOME']) / 'bin') + os.pathsep + os.environ.get('PATH', '')
+    run(sys.executable, 'tools/jpms/coordinates.py')
     run(sys.executable, 'tools/jpms/relocate.py')
     options = ['mvn', '-B', '-Dassembly.skipAssembly=true']
     # Bootstrap on the classpath, including new modules with no descriptor yet.

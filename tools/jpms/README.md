@@ -85,3 +85,11 @@ parent and is excluded upstream; RPM packaging is also excluded. Both have
 descriptors but are not built by the validation command. The separate client
 example now targets this fork's version and includes the descriptor packaging
 step; build it manually after installing the reactor if needed.
+
+## Maven coordinates
+
+Fork artifacts use `consulo.internal.org.languagetool`; artifact IDs, Java
+packages and JPMS module names retain their existing names. Dictionary jars
+that are not built in this repository keep their upstream group IDs.
+`coordinates.py`, called by `refresh.py`, reapplies this distinction after an
+upstream merge. Assembly filters use `${project.groupId}`.

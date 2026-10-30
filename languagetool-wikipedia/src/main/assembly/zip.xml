@@ -38,9 +38,9 @@
             <outputFileNameMapping>${artifact.artifactId}${dashClassifier?}.${artifact.extension}</outputFileNameMapping>
             <excludes>
                 <!-- gets unzipped below: -->
-                <exclude>org.languagetool:language-*</exclude>
+                <exclude>consulo.internal.${project.groupId}:language-*</exclude>
                 <!-- this is what the user calls, so put it in the top directory: -->
-                <exclude>org.languagetool:languagetool-wikipedia</exclude>
+                <exclude>consulo.internal.${project.groupId}:languagetool-wikipedia</exclude>
             </excludes>
         </dependencySet>
         <dependencySet>
@@ -48,7 +48,7 @@
             <outputDirectory></outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}${dashClassifier?}.${artifact.extension}</outputFileNameMapping>
             <includes>
-                <include>org.languagetool:languagetool-wikipedia</include>
+                <include>consulo.internal.${project.groupId}:languagetool-wikipedia</include>
             </includes>
         </dependencySet>
         <dependencySet>
@@ -56,7 +56,7 @@
             <unpack>true</unpack>
             <scope>runtime</scope>
             <includes>
-                <include>org.languagetool:language-*</include>
+                <include>consulo.internal.${project.groupId}:language-*</include>
             </includes>
         </dependencySet>
     </dependencySets>

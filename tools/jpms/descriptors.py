@@ -19,6 +19,7 @@ def module_name(artifact):
 
 
 def generate():
+    project_group = ET.parse(ROOT / 'pom.xml').findtext('m:groupId', namespaces=NS)
     mapping = json.loads((ROOT / 'target/jpms/dependencies.json').read_text())
     modules = {}
     for pom in ROOT.glob('**/pom.xml'):
@@ -49,7 +50,7 @@ def generate():
                 continue
             dep = dependency.findtext('m:artifactId', namespaces=NS)
             group = dependency.findtext('m:groupId', namespaces=NS)
-            if group == 'org.languagetool' and dep in modules:
+            if group == project_group and dep in modules:
                 requires.add(modules[dep][2])
                 transitive.add(modules[dep][2])
             else:

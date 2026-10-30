@@ -21,6 +21,8 @@ OUTPUT = ROOT / 'target/jpms'
 def prepare():
     OUTPUT.mkdir(parents=True, exist_ok=True)
     namespace = {'m': 'http://maven.apache.org/POM/4.0.0'}
+    project_group = ET.parse(ROOT / 'pom.xml').findtext('m:groupId', namespaces=namespace)
+    project_group_path = '/' + project_group.replace('.', '/') + '/'
     reactor = {ET.parse(pom).findtext('m:artifactId', namespaces=namespace)
                for pom in ROOT.glob('**/pom.xml')
                if not any(part in ('target', 'src') for part in pom.relative_to(ROOT).parts)}
@@ -32,7 +34,7 @@ def prepare():
             if jar.suffix != '.jar' or not jar.exists():
                 continue
             # Reactor jars are copied separately, after descriptors are added.
-            if jar.is_relative_to(ROOT) or ('/org/languagetool/' in str(jar) and jar.parent.parent.name in reactor):
+            if jar.is_relative_to(ROOT) or ((project_group_path in str(jar) or '/org/languagetool/' in str(jar)) and jar.parent.parent.name in reactor):
                 continue
             key = (jar.parent.parent, re.sub(r'-' + re.escape(jar.parent.name), '', jar.name))
             if key not in artifacts:

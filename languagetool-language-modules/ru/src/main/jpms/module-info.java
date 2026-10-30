@@ -1,7 +1,7 @@
 // Maintained by tools/jpms/descriptors.py; see tools/jpms/README.md.
 open module org.languagetool.language.ru {
     requires com.google.common;
-    requires com.hankcs.aho.corasick;
+    requires transitive com.hankcs.aho.corasick;
     requires it.unimi.dsi.fastutil.core;
     requires openregex;
     requires org.apache.commons.lang3;
