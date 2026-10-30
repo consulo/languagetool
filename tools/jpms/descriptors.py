@@ -13,6 +13,8 @@ NS = {'m': 'http://maven.apache.org/POM/4.0.0'}
 
 
 def module_name(artifact):
+    if artifact == 'languagetool-aho-corasick':
+        return 'com.hankcs.aho.corasick'
     if artifact == 'languagetool':
         return 'org.languagetool.rpm'
     return 'org.languagetool.' + (artifact.removeprefix('languagetool-').replace('-', '.'))

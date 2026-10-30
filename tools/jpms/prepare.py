@@ -60,15 +60,6 @@ def prepare():
             packages[jar] = {n.rsplit('/', 1)[0].replace('/', '.') for n in archive.namelist()
                              if n.endswith('.class') and '/' in n and not n.startswith('META-INF/')}
     groups = [{jar} for jar in jars]
-    # JAXB 2 and 4 use distinct API packages, but their implementations bundle
-    # overlapping helpers. Keep the entire stack together, including modules
-    # whose explicit descriptors require one of those bundled helpers.
-    jaxb_names = {'java.xml.bind', 'jakarta.xml.bind', 'jaxb.core', 'com.sun.xml.bind',
-                  'org.glassfish.jaxb.runtime', 'org.glassfish.jaxb.core',
-                  'com.sun.xml.txw2', 'com.sun.istack.runtime'}
-    jaxb = {jar for jar in jars if names[jar] in jaxb_names}
-    if jaxb:
-        groups = [group for group in groups if not group & jaxb] + [jaxb]
     # Merge connected components of the split-package graph.
     while True:
         merged = False
@@ -98,8 +89,6 @@ def prepare():
             members.sort(key=lambda p: names[p] != canonical)
         elif 'java.annotation' in module_names:
             canonical = 'java.annotation'
-        elif any('jaxb' in m or m == 'java.xml.bind' or m == 'com.sun.xml.bind' for m in module_names):
-            canonical = 'org.languagetool.jaxb' if len(group) > 1 else names[members[0]]
         elif 'lucene.core' in module_names:
             canonical = 'lucene.core'
         else:

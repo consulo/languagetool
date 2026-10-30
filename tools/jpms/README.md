@@ -47,16 +47,16 @@ third-party module path.
 ## Third-party compatibility
 
 The existing dependency graph cannot be placed directly on a module path:
-several jars split Java packages, the trie artifact's filename contains the Java
-keyword `double`, and some explicit dependency descriptors require artifacts
-excluded by the upstream POMs.
+some jars split Java packages, and some explicit dependency descriptors require
+artifacts excluded by the upstream POMs.
 
 `prepare.py` writes compatibility copies under `target/jpms/lib`; it never edits
 sources or the Maven cache. It combines jars sharing packages into one automatic
 module, preserves classpath precedence for duplicate files, and combines service
-registrations. JAXB's two implementation generations are kept together because
-they share bundled helpers. The annotation group uses `org.jetbrains.annotations`,
-Lucene uses `lucene.core`, JAXB uses `org.languagetool.jaxb`, and the trie uses
+registrations. The annotation group uses `org.jetbrains.annotations` and Lucene
+uses `lucene.core`. Segment now uses the published named module
+`net.loomchild.segment` with Jakarta XML Binding 4; the JAXB modules retain their
+original descriptors. The trie is a separate reactor module named
 `com.hankcs.aho.corasick`. A dependency whose explicit descriptor requires a
 missing or combined module gets an automatic descriptor with its original name.
 Other dependencies are copied unchanged. `target/jpms/groups.json` records every

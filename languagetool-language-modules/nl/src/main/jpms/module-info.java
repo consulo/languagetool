@@ -3,7 +3,7 @@ open module org.languagetool.language.nl {
     requires com.google.common;
     requires com.hankcs.aho.corasick;
     requires dutch.pos.dict;
-    requires it.unimi.dsi.fastutil.core;
+    requires it.unimi.dsi.fastutil;
     requires org.apache.commons.lang3;
     requires static org.jetbrains.annotations;
     requires transitive org.languagetool.core;

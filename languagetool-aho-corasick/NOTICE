@@ -1,0 +1,8 @@
+AhoCorasickDoubleArrayTrie
+https://github.com/hankcs/AhoCorasickDoubleArrayTrie
+
+Copyright 2008-2016 hankcs <me@hankcs.com>
+
+The Java sources are taken unmodified from
+com.hankcs:aho-corasick-double-array-trie:1.2.2.
+This LanguageTool fork adds Maven packaging and a JPMS module descriptor.

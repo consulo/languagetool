@@ -62,8 +62,8 @@
             <artifactId>protobuf-java</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.hankcs</groupId>
-            <artifactId>aho-corasick-double-array-trie</artifactId>
+            <groupId>consulo.internal.org.languagetool</groupId>
+            <artifactId>languagetool-aho-corasick</artifactId>
         </dependency>
         <dependency>
             <groupId>com.optimaize.languagedetector</groupId>
@@ -138,11 +138,6 @@
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient_guava</artifactId>
         </dependency>
-        <!-- JAXB needs javax.activation module (jdk9) -->
-        <dependency>
-            <groupId>javax.activation</groupId>
-            <artifactId>javax.activation-api</artifactId>
-        </dependency>
         <dependency>
             <!-- fix compilation error:
                 cannot find symbol
@@ -158,12 +153,7 @@
             <!-- see https://github.com/languagetool-org/languagetool/issues/4088 before you upgrade this -->
         </dependency>
         <dependency>
-            <!-- for JDK 9 -->
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>net.loomchild</groupId>
+            <groupId>consulo.internal.net.loomchild</groupId>
             <artifactId>segment</artifactId>
         </dependency>
         <dependency>
@@ -204,17 +194,13 @@
             <artifactId>morfologik-stemming</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-runtime</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>it.unimi.dsi</groupId>
-            <artifactId>fastutil-core</artifactId>
+            <artifactId>fastutil</artifactId>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>

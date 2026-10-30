@@ -35,8 +35,6 @@ import org.languagetool.tools.Tools;
 import org.languagetool.tools.DiffsAsMatches;
 import org.languagetool.tools.PseudoMatch;
 
-import javax.xml.bind.DatatypeConverter;
-
 public class SentenceAnnotator {
 
   static HashMap<String, List<RemoteRuleMatch>> cachedMatches;
@@ -419,7 +417,7 @@ public class SentenceAnnotator {
     MessageDigest md5 = MessageDigest.getInstance("MD5");
     md5.update(sentence.getBytes());
     byte[] digest = md5.digest();
-    return DatatypeConverter.printHexBinary(digest);
+    return HexFormat.of().withUpperCase().formatHex(digest);
   }
 
   private static void printOutputLine(AnnotatorConfig cfg, String sentenceHash, String sentenceID,

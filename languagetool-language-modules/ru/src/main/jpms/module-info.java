@@ -2,7 +2,7 @@
 open module org.languagetool.language.ru {
     requires com.google.common;
     requires transitive com.hankcs.aho.corasick;
-    requires it.unimi.dsi.fastutil.core;
+    requires it.unimi.dsi.fastutil;
     requires openregex;
     requires org.apache.commons.lang3;
     requires static org.jetbrains.annotations;

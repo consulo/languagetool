@@ -4,7 +4,7 @@ open module org.languagetool.language.en {
     requires transitive com.hankcs.aho.corasick;
     requires english.pos.dict;
     requires indriya;
-    requires it.unimi.dsi.fastutil.core;
+    requires it.unimi.dsi.fastutil;
     requires opennlp.chunk.models;
     requires opennlp.postag.models;
     requires opennlp.tokenize.models;

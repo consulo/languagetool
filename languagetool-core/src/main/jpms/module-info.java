@@ -22,8 +22,7 @@ open module org.languagetool.core {
     requires io.opentelemetry.context;
     requires io.opentelemetry.semconv;
     requires io.prometheus.metrics.model;
-    requires it.unimi.dsi.fastutil.core;
-    requires java.activation;
+    requires it.unimi.dsi.fastutil;
     requires java.annotation;
     requires transitive java.xml;
     requires transitive language.detector;
@@ -43,9 +42,8 @@ open module org.languagetool.core {
     requires transitive org.carrot2.morfologik.stemming;
     requires static org.jetbrains.annotations;
     requires org.json;
-    requires org.languagetool.jaxb;
     requires transitive org.slf4j;
-    requires segment;
+    requires net.loomchild.segment;
     requires simpleclient;
     requires simpleclient.guava;
     requires transitive unit.api;

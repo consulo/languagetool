@@ -4,7 +4,7 @@ open module org.languagetool.language.de {
     requires transitive com.hankcs.aho.corasick;
     requires german.pos.dict;
     requires indriya;
-    requires it.unimi.dsi.fastutil.core;
+    requires it.unimi.dsi.fastutil;
     requires jwordsplitter;
     requires openregex;
     requires org.apache.commons.lang3;
