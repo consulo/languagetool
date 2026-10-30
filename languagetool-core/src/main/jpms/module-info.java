@@ -14,7 +14,8 @@ open module org.languagetool.core {
     requires io.github.resilience4j.micrometer;
     requires transitive io.grpc;
     requires io.grpc.internal;
-    requires io.grpc.netty.shaded;
+    requires io.grpc.netty;
+    requires io.netty.handler;
     requires io.grpc.protobuf;
     requires transitive io.grpc.stub;
     requires transitive io.opentelemetry.api;
