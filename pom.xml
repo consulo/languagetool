@@ -90,6 +90,8 @@
 
     <properties>
         <revision>6.9.1</revision>
+        <!-- Jenkins' embedded Maven does not set the command-line launcher's root property. -->
+        <jpms.project.root>${session.executionRootDirectory}</jpms.project.root>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -1397,7 +1399,7 @@
                         <configuration>
                             <executable>${java.home}/bin/java</executable>
                             <arguments>
-                                <argument>${maven.multiModuleProjectDirectory}/tools/jpms/ModulePackages.java</argument>
+                                <argument>${jpms.project.root}/tools/jpms/ModulePackages.java</argument>
                                 <argument>${project.build.directory}/${project.build.finalName}.jar</argument>
                             </arguments>
                         </configuration>
@@ -1455,6 +1457,18 @@
         </plugins>
     </build>
     <profiles>
+        <profile>
+            <id>jpms-cli-root</id>
+            <activation>
+                <property>
+                    <name>maven.multiModuleProjectDirectory</name>
+                </property>
+            </activation>
+            <properties>
+                <!-- Preserve .mvn root discovery for direct child-project builds. -->
+                <jpms.project.root>${maven.multiModuleProjectDirectory}</jpms.project.root>
+            </properties>
+        </profile>
         <profile>
             <id>sign-and-release</id>
             <build>

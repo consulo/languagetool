@@ -10,6 +10,10 @@ LanguageTool discovers classes reflectively and loads resources across modules.
 All existing public packages remain exported. Language modules require core
 transitively, and `org.languagetool.language.all` requires the supported languages.
 
+The helper path defaults to Maven's session execution root for embedded builds
+such as Jenkins. The `jpms-cli-root` profile uses the command-line launcher's
+`.mvn` root when that property is available, including direct child builds.
+
 ## Build and verify
 
 Use JDK 17 or 21, Maven, and Python 3.9+. Set `JAVA_HOME` to select the JDK

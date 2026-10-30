@@ -86,7 +86,7 @@
                         <configuration>
                             <executable>${java.home}/bin/java</executable>
                             <arguments>
-                                <argument>${maven.multiModuleProjectDirectory}/tools/jpms/ModulePackages.java</argument>
+                                <argument>${project.basedir}/../tools/jpms/ModulePackages.java</argument>
                                 <argument>${project.build.directory}/${project.build.finalName}.jar</argument>
                             </arguments>
                         </configuration>
