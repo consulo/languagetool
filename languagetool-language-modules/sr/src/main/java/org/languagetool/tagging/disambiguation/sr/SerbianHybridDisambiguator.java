@@ -19,7 +19,7 @@
 package org.languagetool.tagging.disambiguation.sr;
 
 import org.languagetool.AnalyzedSentence;
-import org.languagetool.language.Serbian;
+import org.languagetool.language.sr.Serbian;
 import org.languagetool.tagging.disambiguation.AbstractDisambiguator;
 import org.languagetool.tagging.disambiguation.Disambiguator;
 import org.languagetool.tagging.disambiguation.MultiWordChunker;

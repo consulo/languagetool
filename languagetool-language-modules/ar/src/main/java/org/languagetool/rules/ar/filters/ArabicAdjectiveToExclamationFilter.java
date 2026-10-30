@@ -24,7 +24,7 @@ import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.SimpleReplaceDataLoader;
 import org.languagetool.rules.patterns.RuleFilter;
 import org.languagetool.tagging.ar.ArabicTagger;
-import org.languagetool.tools.ArabicWordMaps;
+import org.languagetool.tools.ar.ArabicWordMaps;
 
 import java.util.*;
 

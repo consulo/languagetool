@@ -29,7 +29,7 @@ import org.apache.commons.pool2.impl.DefaultPooledObject;
 import org.apache.commons.pool2.impl.GenericKeyedObjectPool;
 import org.apache.commons.pool2.impl.GenericKeyedObjectPoolConfig;
 import org.languagetool.*;
-import org.languagetool.gui.Configuration;
+import org.languagetool.gui.commons.Configuration;
 import org.languagetool.rules.*;
 import org.languagetool.tools.TelemetryProvider;
 import org.languagetool.tools.Tools;
@@ -221,7 +221,7 @@ class PipelinePool implements KeyedPooledObjectFactory<PipelineSettings, Pipelin
     ServerTools.print("Using options configured in " + config.getRulesConfigFile());
     // If we are explicitly configuring from rules, ignore the useGUIConfig flag
     if (config.getRulesConfigFile() != null) {
-      org.languagetool.gui.Tools.configureFromRules(lt, new Configuration(config.getRulesConfigFile()
+      org.languagetool.gui.commons.Tools.configureFromRules(lt, new Configuration(config.getRulesConfigFile()
         .getCanonicalFile().getParentFile(), config.getRulesConfigFile().getName(), lang));
     } else {
       throw new RuntimeException("config.getRulesConfigFile() is null");
@@ -232,7 +232,7 @@ class PipelinePool implements KeyedPooledObjectFactory<PipelineSettings, Pipelin
     Configuration config = new Configuration(lang);
     if (internalServer && config.getUseGUIConfig()) {
       ServerTools.print("Using options configured in the GUI");
-      org.languagetool.gui.Tools.configureFromRules(lt, config);
+      org.languagetool.gui.commons.Tools.configureFromRules(lt, config);
     }
   }
 

@@ -30,7 +30,7 @@ import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.LuceneTestCase;
 import org.languagetool.JLanguageTool;
 import org.languagetool.Language;
-import org.languagetool.language.English;
+import org.languagetool.language.en.English;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.patterns.AbstractPatternRule;
 import org.languagetool.rules.patterns.PatternRule;

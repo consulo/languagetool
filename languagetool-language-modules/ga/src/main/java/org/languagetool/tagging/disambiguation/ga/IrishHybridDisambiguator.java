@@ -20,7 +20,7 @@
 package org.languagetool.tagging.disambiguation.ga;
 
 import org.languagetool.AnalyzedSentence;
-import org.languagetool.language.Irish;
+import org.languagetool.language.ga.Irish;
 import org.languagetool.tagging.disambiguation.AbstractDisambiguator;
 import org.languagetool.tagging.disambiguation.Disambiguator;
 import org.languagetool.tagging.disambiguation.MultiWordChunker;

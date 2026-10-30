@@ -148,3 +148,8 @@ Now, you can use the bleeding edge development copy of LanguageTool `*.jar` file
 
 Unless otherwise noted, this software – the LanguageTool core – is distributed under the LGPL; see
 [`COPYING.txt`](https://github.com/languagetool-org/languagetool/blob/master/COPYING.txt).
+
+## Java modules
+
+For this fork's JPMS build, package relocations, and upstream merge workflow, see
+[the JPMS build notes](tools/jpms/README.md).

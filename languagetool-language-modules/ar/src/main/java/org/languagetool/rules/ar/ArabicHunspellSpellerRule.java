@@ -21,9 +21,9 @@ package org.languagetool.rules.ar;
 
 import org.jetbrains.annotations.NotNull;
 import org.languagetool.UserConfig;
-import org.languagetool.language.Arabic;
+import org.languagetool.language.ar.Arabic;
 import org.languagetool.rules.spelling.hunspell.HunspellRule;
-import org.languagetool.tools.ArabicStringTools;
+import org.languagetool.tools.ar.ArabicStringTools;
 
 import java.io.IOException;
 import java.util.ResourceBundle;

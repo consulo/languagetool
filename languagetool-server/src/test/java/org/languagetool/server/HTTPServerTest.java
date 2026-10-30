@@ -18,6 +18,13 @@
  */
 package org.languagetool.server;
 
+import org.languagetool.language.de.German;
+import org.languagetool.language.de.GermanyGerman;
+import org.languagetool.language.en.AmericanEnglish;
+import org.languagetool.language.en.English;
+import org.languagetool.language.pl.Polish;
+import org.languagetool.language.ro.Romanian;
+
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Ignore;

@@ -18,6 +18,8 @@
  */
 package org.languagetool.gui;
 
+import org.languagetool.gui.commons.Tools;
+
 import java.awt.ComponentOrientation;
 import java.awt.Font;
 import java.awt.Frame;

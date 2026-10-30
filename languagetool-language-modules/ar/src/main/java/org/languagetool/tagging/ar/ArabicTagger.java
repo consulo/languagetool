@@ -24,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 import org.languagetool.AnalyzedToken;
 import org.languagetool.AnalyzedTokenReadings;
 import org.languagetool.tagging.BaseTagger;
-import org.languagetool.tools.ArabicStringTools;
+import org.languagetool.tools.ar.ArabicStringTools;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -11,7 +11,7 @@ The command used to generate dictionary are:
 3- merge results into one file
 4- build morfologik dict by
 
-java -cp languagetool.jar org.languagetool.tools.POSDictionaryBuilder -i nouns.dict.tags -info org/languagetool/resource/ar/arabic.info -o org/languagetool/resource/ar/arabic.dict
+java -cp languagetool.jar org.languagetool.tools.dictionary.POSDictionaryBuilder -i nouns.dict.tags -info org/languagetool/resource/ar/arabic.info -o org/languagetool/resource/ar/arabic.dict
 
 Structure:
 ==========

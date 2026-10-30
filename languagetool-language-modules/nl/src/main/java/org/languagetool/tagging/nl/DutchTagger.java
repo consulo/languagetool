@@ -24,7 +24,7 @@ import org.languagetool.AnalyzedTokenReadings;
 import org.languagetool.rules.nl.CompoundAcceptor;
 import org.languagetool.tagging.BaseTagger;
 import org.languagetool.tools.StringTools;
-import org.languagetool.language.Dutch;
+import org.languagetool.language.nl.Dutch;
 
 import java.util.*;
 import java.util.regex.Pattern;

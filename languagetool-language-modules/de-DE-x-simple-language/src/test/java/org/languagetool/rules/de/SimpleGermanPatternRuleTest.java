@@ -21,7 +21,7 @@ package org.languagetool.rules.de;
 import java.io.IOException;
 
 import org.junit.Test;
-import org.languagetool.language.SimpleGerman;
+import org.languagetool.language.de_DE_x_simple_language.SimpleGerman;
 import org.languagetool.rules.patterns.PatternRuleTest;
 
 public class SimpleGermanPatternRuleTest extends PatternRuleTest {

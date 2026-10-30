@@ -22,8 +22,8 @@ import org.junit.Test;
 import org.languagetool.JLanguageTool;
 import org.languagetool.Language;
 import org.languagetool.LanguageSpecificTest;
-import org.languagetool.language.Catalan;
-import org.languagetool.language.ValencianCatalan;
+import org.languagetool.language.ca.Catalan;
+import org.languagetool.language.ca.ValencianCatalan;
 import org.languagetool.rules.RuleMatch;
 
 import static org.junit.Assert.assertEquals;

@@ -18,6 +18,14 @@
  */
 package org.languagetool.rules.patterns;
 
+import org.languagetool.language.de.German;
+import org.languagetool.language.de.SwissGerman;
+import org.languagetool.language.en.AmericanEnglish;
+import org.languagetool.language.en.BritishEnglish;
+import org.languagetool.language.en.English;
+import org.languagetool.language.it.Italian;
+import org.languagetool.language.pl.Polish;
+
 import org.junit.Ignore;
 import org.junit.Test;
 import org.languagetool.JLanguageTool;

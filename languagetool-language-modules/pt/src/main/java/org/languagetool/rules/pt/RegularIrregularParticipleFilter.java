@@ -22,7 +22,7 @@ package org.languagetool.rules.pt;
 import org.languagetool.AnalyzedToken;
 import org.languagetool.AnalyzedTokenReadings;
 import org.languagetool.Language;
-import org.languagetool.language.Portuguese;
+import org.languagetool.language.pt.Portuguese;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.patterns.RuleFilter;
 import org.languagetool.synthesis.pt.PortugueseSynthesizer;

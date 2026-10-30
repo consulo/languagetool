@@ -23,7 +23,7 @@ import org.languagetool.Language;
 import org.languagetool.UserConfig;
 import org.languagetool.AnalyzedSentence;
 import org.languagetool.AnalyzedTokenReadings;
-import org.languagetool.language.Dutch;
+import org.languagetool.language.nl.Dutch;
 import org.languagetool.rules.spelling.morfologik.MorfologikSpellerRule;
 import org.languagetool.rules.RuleMatch;
 

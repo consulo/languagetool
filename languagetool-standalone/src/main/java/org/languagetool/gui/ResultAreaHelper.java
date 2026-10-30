@@ -18,6 +18,8 @@
  */
 package org.languagetool.gui;
 
+import org.languagetool.gui.commons.Tools;
+
 import java.awt.Cursor;
 import java.awt.Desktop;
 import java.io.IOException;

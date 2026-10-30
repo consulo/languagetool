@@ -18,6 +18,11 @@
  */
 package org.languagetool.gui;
 
+import org.languagetool.gui.commons.AboutDialog;
+import org.languagetool.gui.commons.Configuration;
+import org.languagetool.gui.commons.ConfigurationDialog;
+import org.languagetool.gui.commons.Tools;
+
 import java.awt.AWTException;
 import java.awt.CheckboxMenuItem;
 import java.awt.Color;

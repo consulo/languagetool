@@ -18,7 +18,7 @@
  */
 package org.languagetool.rules.ru;
 
-import org.languagetool.language.Russian;
+import org.languagetool.language.ru.Russian;
 import org.languagetool.rules.*;
 
 import java.io.IOException;

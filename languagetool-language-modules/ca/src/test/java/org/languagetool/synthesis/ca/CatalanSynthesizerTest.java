@@ -22,7 +22,7 @@ package org.languagetool.synthesis.ca;
 import org.junit.Test;
 import org.languagetool.AnalyzedToken;
 import org.languagetool.Language;
-import org.languagetool.language.ValencianCatalan;
+import org.languagetool.language.ca.ValencianCatalan;
 
 import java.io.IOException;
 import java.util.Arrays;

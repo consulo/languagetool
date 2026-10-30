@@ -24,7 +24,7 @@ import org.languagetool.AnalyzedToken;
 import org.languagetool.AnalyzedTokenReadings;
 import org.languagetool.JLanguageTool;
 import org.languagetool.Language;
-import org.languagetool.language.Catalan;
+import org.languagetool.language.ca.Catalan;
 import org.languagetool.rules.Rule;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.synthesis.ca.VerbSynthesizer;

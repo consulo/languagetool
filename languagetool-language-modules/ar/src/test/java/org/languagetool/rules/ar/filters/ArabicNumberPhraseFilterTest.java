@@ -24,7 +24,7 @@ import org.languagetool.rules.FakeRule;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.patterns.RuleFilter;
 import org.languagetool.tagging.ar.ArabicTagger;
-import org.languagetool.tokenizers.ArabicWordTokenizer;
+import org.languagetool.tokenizers.ar.ArabicWordTokenizer;
 
 import java.io.IOException;
 import java.util.Collections;

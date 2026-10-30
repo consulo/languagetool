@@ -21,7 +21,7 @@ package org.languagetool.tagging.disambiguation.pt;
 import org.junit.Before;
 import org.junit.Test;
 import org.languagetool.TestTools;
-import org.languagetool.language.Portuguese;
+import org.languagetool.language.pt.Portuguese;
 import org.languagetool.tagging.pt.PortugueseTagger;
 import org.languagetool.tokenizers.SRXSentenceTokenizer;
 import org.languagetool.tokenizers.SentenceTokenizer;

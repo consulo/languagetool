@@ -18,6 +18,14 @@
  */
 package org.languagetool;
 
+import org.languagetool.language.de.AustrianGerman;
+import org.languagetool.language.de.German;
+import org.languagetool.language.de.GermanyGerman;
+import org.languagetool.language.de.SwissGerman;
+import org.languagetool.language.en.AmericanEnglish;
+import org.languagetool.language.en.BritishEnglish;
+import org.languagetool.language.en.English;
+
 import org.junit.Test;
 import org.languagetool.language.*;
 

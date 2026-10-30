@@ -29,67 +29,6 @@ import java.util.List;
 import java.util.Map;
 
 @SuppressWarnings("ALL")
-class SuggestionChangesTestConfig {
-
-  public String ngramLocation;
-  public String rule;
-  public String language;
-  public String logDir;
-
-  public List<SuggestionChangesExperimentRuns> experiments;
-  public List<SuggestionChangesDataset> datasets;
-
-
-  @Override
-  public String toString() {
-    return "SuggestionChangesTestConfig{" +
-      "ngramLocation='" + ngramLocation + '\'' +
-      ", rule='" + rule + '\'' +
-      ", language='" + language + '\'' +
-      ", logDir='" + logDir + '\'' +
-      ", experiments=" + experiments +
-      ", datasets=" + datasets +
-      '}';
-  }
-}
-
-@SuppressWarnings("ALL")
-class SuggestionChangesDataset {
-  public String name;
-  public String path;
-  public String type; // dump | artificial; different columns in CSV file
-  public float sampleRate;
-  public boolean enforceCorrect; // no spelling errors in correction, otherwise entries are skipped
-  public boolean enforceAcceptLanguage; // only for type==dump: first field in acceptLanguage must be equal to the text language
-
-  @Override
-  public String toString() {
-    return "SuggestionChangesDataset{" +
-      "name='" + name + '\'' +
-      ", path='" + path + '\'' +
-      ", type='" + type + '\'' +
-      ", sampleRate=" + sampleRate +
-      ", enforceCorrect=" + enforceCorrect +
-      ", enforceAcceptLanguage=" + enforceAcceptLanguage +
-      '}';
-  }
-}
-
-@SuppressWarnings("ALL")
-class SuggestionChangesExperimentRuns {
-  public String name;
-  public Map<String, List<Object>> parameters;
-
-  @Override
-  public String toString() {
-    return "SuggestionChangesExperimentRuns{" +
-      "name='" + name + '\'' +
-      ", parameters=" + parameters +
-      '}';
-  }
-}
-
-@SuppressWarnings("ALL")
 public class SuggestionChangesExperiment {
   public String name;
   public Map<String, Object> parameters;

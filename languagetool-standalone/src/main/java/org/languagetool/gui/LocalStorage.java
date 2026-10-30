@@ -18,6 +18,8 @@
  */
 package org.languagetool.gui;
 
+import org.languagetool.gui.commons.Tools;
+
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.BufferedInputStream;

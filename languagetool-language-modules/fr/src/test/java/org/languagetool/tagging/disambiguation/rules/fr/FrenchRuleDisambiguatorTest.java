@@ -22,7 +22,7 @@ package org.languagetool.tagging.disambiguation.rules.fr;
 import org.junit.Before;
 import org.junit.Test;
 import org.languagetool.TestTools;
-import org.languagetool.language.French;
+import org.languagetool.language.fr.French;
 import org.languagetool.tagging.disambiguation.fr.FrenchHybridDisambiguator;
 import org.languagetool.tagging.disambiguation.xx.DemoDisambiguator;
 import org.languagetool.tagging.fr.FrenchTagger;

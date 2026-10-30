@@ -18,6 +18,14 @@
  */
 package org.languagetool;
 
+import org.languagetool.language.ca.Catalan;
+import org.languagetool.language.de.GermanyGerman;
+import org.languagetool.language.en.AmericanEnglish;
+import org.languagetool.language.es.Spanish;
+import org.languagetool.language.fr.French;
+import org.languagetool.language.nl.Dutch;
+import org.languagetool.language.pt.BrazilianPortuguese;
+
 import org.hamcrest.CoreMatchers;
 import org.junit.Ignore;
 import org.junit.Test;

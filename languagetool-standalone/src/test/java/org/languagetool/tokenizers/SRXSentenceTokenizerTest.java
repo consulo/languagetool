@@ -21,8 +21,8 @@ package org.languagetool.tokenizers;
 import org.junit.Test;
 import org.languagetool.Language;
 import org.languagetool.Languages;
-import org.languagetool.language.AmericanEnglish;
-import org.languagetool.language.French;
+import org.languagetool.language.en.AmericanEnglish;
+import org.languagetool.language.fr.French;
 
 import java.util.Arrays;
 import java.util.List;

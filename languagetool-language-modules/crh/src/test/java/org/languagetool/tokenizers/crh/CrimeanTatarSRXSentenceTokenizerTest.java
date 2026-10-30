@@ -21,7 +21,7 @@ package org.languagetool.tokenizers.crh;
 import org.junit.Before;
 import org.junit.Test;
 import org.languagetool.TestTools;
-import org.languagetool.language.CrimeanTatar;
+import org.languagetool.language.crh.CrimeanTatar;
 import org.languagetool.tokenizers.SRXSentenceTokenizer;
 import org.languagetool.tokenizers.SentenceTokenizer;
 

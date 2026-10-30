@@ -21,7 +21,7 @@ package org.languagetool.rules.es;
 import org.apache.commons.lang3.StringUtils;
 import org.languagetool.AnalyzedTokenReadings;
 import org.languagetool.Tag;
-import org.languagetool.language.Spanish;
+import org.languagetool.language.es.Spanish;
 import org.languagetool.rules.AbstractRepeatedWordsRule;
 import org.languagetool.rules.SynonymsData;
 import org.languagetool.rules.patterns.PatternToken;

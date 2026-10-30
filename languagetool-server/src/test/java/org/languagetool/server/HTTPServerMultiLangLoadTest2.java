@@ -22,7 +22,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.languagetool.Language;
 import org.languagetool.Languages;
-import org.languagetool.language.German;
+import org.languagetool.language.de.German;
 import org.languagetool.tools.StringTools;
 import org.xml.sax.SAXException;
 

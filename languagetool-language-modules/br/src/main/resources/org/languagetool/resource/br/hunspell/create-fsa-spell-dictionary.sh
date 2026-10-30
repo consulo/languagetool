@@ -24,7 +24,7 @@ LC_ALL=C sort > $TEMP_FILE
 
 java -cp ../../../../../../../../../../languagetool-standalone/target/LanguageTool-4.2-SNAPSHOT/LanguageTool-4.2-SNAPSHOT/languagetool.jar \
   -Xmx2048m \
-  org.languagetool.tools.SpellDictionaryBuilder \
+  org.languagetool.tools.dictionary.SpellDictionaryBuilder \
   $TEMP_FILE -i $TEMP_FILE -info br_FR.info -o br_FR.dict
 
 rm $TEMP_FILE

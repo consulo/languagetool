@@ -25,7 +25,7 @@ import java.io.IOException;
 import org.junit.Before;
 import org.junit.Test;
 import org.languagetool.TestTools;
-import org.languagetool.language.CrimeanTatar;
+import org.languagetool.language.crh.CrimeanTatar;
 import org.languagetool.tokenizers.crh.CrimeanTatarWordTokenizer;
 
 public class CrimeanTatarTaggerTest {

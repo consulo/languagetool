@@ -20,8 +20,8 @@ package org.languagetool.dev;
 
 import org.apache.commons.lang3.StringUtils;
 import org.languagetool.AnalyzedToken;
-import org.languagetool.language.German;
-import org.languagetool.language.GermanyGerman;
+import org.languagetool.language.de.German;
+import org.languagetool.language.de.GermanyGerman;
 import org.languagetool.synthesis.Synthesizer;
 
 import java.io.IOException;

@@ -22,7 +22,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.languagetool.JLanguageTool;
 import org.languagetool.TestTools;
-import org.languagetool.language.SerbianSerbian;
+import org.languagetool.language.sr.SerbianSerbian;
 import org.languagetool.rules.Rule;
 
 import java.io.IOException;

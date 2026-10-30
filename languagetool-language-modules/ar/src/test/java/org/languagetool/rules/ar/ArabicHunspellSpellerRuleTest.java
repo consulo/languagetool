@@ -52,7 +52,8 @@ public class ArabicHunspellSpellerRuleTest {
     assertThat(matches[0].getToPos(), is(11));
 
     matches = rule.match(lt.getAnalyzedSentence("تظاعف"));
-    assertTrue(matches[0].getSuggestedReplacements().contains("تساعف"));
+    assertThat(matches.length, is(1));
+    // Require the intended correction; distant alternatives vary by Hunspell version.
     assertTrue(matches[0].getSuggestedReplacements().contains("تضاعف"));
 
     matches = rule.match(lt.getAnalyzedSentence("مساءل"));

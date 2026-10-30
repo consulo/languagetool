@@ -1,0 +1,7 @@
+# Default IDE ignored files
+/workspace.xml
+/.name
+/*.xml
+/*.json
+/libraries
+/copyright

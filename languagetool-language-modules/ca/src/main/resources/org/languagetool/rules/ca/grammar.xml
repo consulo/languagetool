@@ -104856,11 +104856,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token inflected="yes" regexp="yes">asseure|seure</token>
                 </marker>
                 <token postag_regexp="yes" postag="D.*"/>
-                <token regexp="yes">base|principi|fonament</token>
+                <token inflected="yes" regexp="yes">base(_1)?|principi|fonament</token>
             </pattern>
             <message>Verb incorrecte en aquest context.</message>
-            <suggestion><match no="1" postag="(V.*)" postag_regexp="yes" postag_replace="yes">assentar</match></suggestion>
-            <suggestion><match no="1" postag="(V.*)" postag_regexp="yes" postag_replace="yes">establir</match></suggestion>
+            <suggestion><match no="1" postag="(V.*)" postag_regexp="yes" postag_replace="$1">assentar</match></suggestion>
+            <suggestion><match no="1" postag="(V.*)" postag_regexp="yes" postag_replace="$1">establir</match></suggestion>
             <example correction="assentar|establir">Van <marker>asseure</marker> les bases de tota l'evolució posterior.</example>
             <example correction="assentat|establit">Han <marker>assegut</marker> les bases de tota l'evolució posterior.</example>
         </rule>

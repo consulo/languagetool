@@ -75,7 +75,7 @@ public class SuggestionsChanges {
     return instance;
   }
 
-  static void init(@NotNull SuggestionChangesTestConfig config, @Nullable BufferedWriter reportWriter) {
+  public static void init(@NotNull SuggestionChangesTestConfig config, @Nullable BufferedWriter reportWriter) {
     instance = new SuggestionsChanges(config, reportWriter);
   }
 

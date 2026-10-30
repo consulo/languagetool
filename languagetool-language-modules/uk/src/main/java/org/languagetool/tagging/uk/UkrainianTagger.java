@@ -30,7 +30,7 @@ import java.util.stream.Stream;
 
 import org.apache.commons.lang3.StringUtils;
 import org.languagetool.AnalyzedToken;
-import org.languagetool.language.Ukrainian;
+import org.languagetool.language.uk.Ukrainian;
 import org.languagetool.rules.uk.LemmaHelper;
 import org.languagetool.tagging.BaseTagger;
 import org.languagetool.tagging.TaggedWord;

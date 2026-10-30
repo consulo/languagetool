@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.languagetool.tools.ArabicConstants.*;
+import static org.languagetool.tools.ar.ArabicConstants.*;
 
 /**
  * Arabic word form synthesizer.

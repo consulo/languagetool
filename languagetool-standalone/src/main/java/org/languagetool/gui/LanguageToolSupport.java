@@ -18,6 +18,9 @@
  */
 package org.languagetool.gui;
 
+import org.languagetool.gui.commons.Configuration;
+import org.languagetool.gui.commons.Tools;
+
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.Nullable;
 import org.languagetool.*;

@@ -18,10 +18,12 @@
  */
 package org.languagetool.gui;
 
+import org.languagetool.gui.commons.Configuration;
+
 import org.junit.Test;
 import org.languagetool.Language;
-import org.languagetool.language.AmericanEnglish;
-import org.languagetool.language.French;
+import org.languagetool.language.en.AmericanEnglish;
+import org.languagetool.language.fr.French;
 
 import java.io.File;
 import java.nio.file.Files;

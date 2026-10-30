@@ -5,7 +5,7 @@ License   :  MPL 1.1/GPL 2.0/LGPL 2.1
 contact   :  Steve Stavropoulos
 URL       :  http://www.elspell.gr/myspell
 
-The dictionary created using org.languagetool.tools.SpellDictionaryBuilder as described in this link:
+The dictionary created using org.languagetool.tools.dictionary.SpellDictionaryBuilder as described in this link:
 https://stackoverflow.com/questions/37412145/in-languagetool-how-do-you-create-a-dictionary-and-use-it-for-spell-checking/37412146#37412146
 
 You can also create a dictionary by using https://github.com/gzougianos/languagetool-dictionarybuilder-gui

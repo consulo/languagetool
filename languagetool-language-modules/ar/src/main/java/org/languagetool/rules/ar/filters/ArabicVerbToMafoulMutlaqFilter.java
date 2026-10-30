@@ -20,7 +20,7 @@ package org.languagetool.rules.ar.filters;
 
 import org.jetbrains.annotations.Nullable;
 import org.languagetool.AnalyzedTokenReadings;
-import org.languagetool.language.Arabic;
+import org.languagetool.language.ar.Arabic;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.SimpleReplaceDataLoader;
 import org.languagetool.rules.patterns.RuleFilter;
@@ -32,8 +32,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.languagetool.tools.ArabicConstants.TEH_MARBUTA;
-//import static org.languagetool.tools.ArabicConstants.ALEF;
+import static org.languagetool.tools.ar.ArabicConstants.TEH_MARBUTA;
+//import static org.languagetool.tools.ar.ArabicConstants.ALEF;
 
 /**
  * Filter that maps suggestion from adverb to adjective.

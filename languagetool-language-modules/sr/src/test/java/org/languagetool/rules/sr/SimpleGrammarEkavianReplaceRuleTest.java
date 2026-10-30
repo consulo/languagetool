@@ -21,7 +21,7 @@ package org.languagetool.rules.sr;
 import org.junit.Test;
 import org.languagetool.JLanguageTool;
 import org.languagetool.TestTools;
-import org.languagetool.language.Serbian;
+import org.languagetool.language.sr.Serbian;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.sr.ekavian.SimpleGrammarEkavianReplaceRule;
 

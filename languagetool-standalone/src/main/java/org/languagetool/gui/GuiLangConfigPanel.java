@@ -18,6 +18,8 @@
  */
 package org.languagetool.gui;
 
+import org.languagetool.gui.commons.SavablePanel;
+
 import java.awt.Color;
 import java.awt.ComponentOrientation;
 import java.awt.GridBagConstraints;

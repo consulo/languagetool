@@ -25,7 +25,7 @@ import org.languagetool.AnalyzedToken;
 import org.languagetool.AnalyzedTokenReadings;
 import org.languagetool.Language;
 import org.languagetool.UserConfig;
-import org.languagetool.language.French;
+import org.languagetool.language.fr.French;
 import org.languagetool.rules.SuggestedReplacement;
 import org.languagetool.rules.spelling.morfologik.MorfologikSpellerRule;
 import org.languagetool.tagging.fr.FrenchTagger;

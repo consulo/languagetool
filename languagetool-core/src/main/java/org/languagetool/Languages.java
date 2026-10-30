@@ -73,7 +73,7 @@ public final class Languages {
    * Language classes are detected at runtime by searching the classpath for files named
    * {@code META-INF/org/languagetool/language-module.properties}. Those file(s)
    * need to contain a key {@code languageClasses} which specifies the fully qualified
-   * class name(s), e.g. {@code org.languagetool.language.English}. Use commas to specify
+   * class name(s), e.g. {@code org.languagetool.language.en.English}. Use commas to specify
    * more than one class.
    * @return an unmodifiable list of all supported languages
    */
@@ -156,7 +156,7 @@ public final class Languages {
   }
 
   static boolean hasPremium(String className) {
-    return className.matches("org\\.languagetool\\.language\\.(" +
+    return className.matches("org\\.languagetool\\.language\\.(?:[a-z_]+\\.)?(" +
       "Portuguese|AngolaPortuguese|BrazilianPortuguese|MozambiquePortuguese|PortugalPortuguese|" +
       "German|GermanyGerman|AustrianGerman|SwissGerman|" +
       "Dutch|French|Spanish|" +
@@ -167,7 +167,7 @@ public final class Languages {
   /**
    * Get the Language object for the given language class name or try to create it and add to dynamic languages.
    *
-   * @param className e.g. <code>org.languagetool.language.English</code>
+   * @param className e.g. <code>org.languagetool.language.en.English</code>
    * @return a Language object
    * @throws RuntimeException if language not found in classpath
    * @since 5.0

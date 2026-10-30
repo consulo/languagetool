@@ -19,9 +19,9 @@
 package org.languagetool;
 
 import org.junit.Test;
-import org.languagetool.language.Catalan;
-import org.languagetool.language.ValencianCatalan;
-import org.languagetool.language.BalearicCatalan;
+import org.languagetool.language.ca.Catalan;
+import org.languagetool.language.ca.ValencianCatalan;
+import org.languagetool.language.ca.BalearicCatalan;
 import org.languagetool.rules.CommaWhitespaceRule;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.ca.SimpleReplaceAnglicism;

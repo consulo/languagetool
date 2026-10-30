@@ -23,7 +23,7 @@ import org.languagetool.JLanguageTool;
 import org.languagetool.Language;
 import org.languagetool.Languages;
 import org.languagetool.broker.ResourceDataBroker;
-import org.languagetool.language.AmericanEnglish;
+import org.languagetool.language.en.AmericanEnglish;
 import org.languagetool.language.Contributor;
 import org.languagetool.rules.ConfusionSetLoader;
 import org.languagetool.rules.Rule;

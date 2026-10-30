@@ -59,7 +59,7 @@ import static java.util.regex.Pattern.*;
  * are detected at runtime by searching the classpath for files named
  * {@code META-INF/org/languagetool/language-module.properties}. Those file(s)
  * need to contain a key {@code languageClasses} which specifies the fully qualified
- * class name(s), e.g. {@code org.languagetool.language.English}. Use commas to specify
+ * class name(s), e.g. {@code org.languagetool.language.en.English}. Use commas to specify
  * more than one class.
  *
  * <p>Sub classes should typically use lazy init for anything that's costly to set up.

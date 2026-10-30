@@ -18,6 +18,9 @@
  */
 package org.languagetool.gui;
 
+import org.languagetool.gui.commons.Configuration;
+import org.languagetool.gui.commons.Tools;
+
 import java.awt.Container;
 import java.awt.Frame;
 import java.awt.GridBagConstraints;

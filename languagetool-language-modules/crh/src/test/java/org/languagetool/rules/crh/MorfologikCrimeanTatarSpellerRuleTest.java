@@ -28,7 +28,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.languagetool.JLanguageTool;
 import org.languagetool.TestTools;
-import org.languagetool.language.CrimeanTatar;
+import org.languagetool.language.crh.CrimeanTatar;
 
 public class MorfologikCrimeanTatarSpellerRuleTest {
   private JLanguageTool langTool;

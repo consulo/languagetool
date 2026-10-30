@@ -23,7 +23,7 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.LuceneTestCase;
 import org.languagetool.Language;
-import org.languagetool.language.English;
+import org.languagetool.language.en.English;
 
 import java.util.ArrayList;
 import java.util.List;

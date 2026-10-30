@@ -77,6 +77,34 @@ import java.util.*;
  */
 public class DefaultResourceDataBroker implements ResourceDataBroker {
 
+  // The built-in loader routes package resources to the module owning that Java
+  // package. Message bundles retain their upstream shared paths, so search the
+  // other modules explicitly when the parent loader cannot find a resource.
+  private static final ClassLoader RESOURCE_LOADER = new ClassLoader(ResourceDataBroker.class.getClassLoader()) {
+    @Override
+    protected URL findResource(String name) {
+      ModuleLayer layer = ResourceDataBroker.class.getModule().getLayer();
+      if (layer == null) {
+        return null;
+      }
+      for (Module module : layer.modules()) {
+        if (module.getClassLoader() != getParent()) {
+          continue;
+        }
+        var reference = layer.configuration().findModule(module.getName()).orElseThrow().reference();
+        try (var reader = reference.open()) {
+          var resource = reader.find(name);
+          if (resource.isPresent()) {
+            return resource.get().toURL();
+          }
+        } catch (IOException e) {
+          throw new java.io.UncheckedIOException(e);
+        }
+      }
+      return null;
+    }
+  };
+
   /**
    * The directory's name of LanguageTool's resource directory. The
    * default value equals {@link ResourceDataBroker#RESOURCE_DIR}.
@@ -162,13 +190,18 @@ public class DefaultResourceDataBroker implements ResourceDataBroker {
     return lines;
   }
 
+  // Class.getResource only searches its own module; language data lives in other modules.
+  private static String resourceName(String path) {
+    return path.startsWith("/") ? path.substring(1) : "org/languagetool/broker/" + path;
+  }
+
   /**
    * {@inheritDoc}
    */
   @Nullable
   @Override
   public InputStream getAsStream(String path) {
-    return ResourceDataBroker.class.getResourceAsStream(path);
+    return RESOURCE_LOADER.getResourceAsStream(resourceName(path));
   }
 
   /**
@@ -177,7 +210,7 @@ public class DefaultResourceDataBroker implements ResourceDataBroker {
   @Nullable
   @Override
   public URL getAsURL(String path) {
-    return ResourceDataBroker.class.getResource(path);
+    return RESOURCE_LOADER.getResource(resourceName(path));
   }
 
   /**
@@ -352,6 +385,8 @@ public class DefaultResourceDataBroker implements ResourceDataBroker {
    */
   @Override
   public ResourceBundle getResourceBundle(String baseName, Locale locale) {
-    return ResourceBundle.getBundle(baseName, locale);
+    return ResourceDataBroker.class.getModule().isNamed()
+      ? ResourceBundle.getBundle(baseName, locale, RESOURCE_LOADER)
+      : ResourceBundle.getBundle(baseName, locale);
   }
 }

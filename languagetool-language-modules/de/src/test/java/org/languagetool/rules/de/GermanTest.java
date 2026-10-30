@@ -20,7 +20,7 @@ package org.languagetool.rules.de;
 
 import org.junit.Test;
 import org.languagetool.*;
-import org.languagetool.language.German;
+import org.languagetool.language.de.German;
 import org.languagetool.rules.Rule;
 import org.languagetool.rules.patterns.AbstractPatternRule;
 import org.languagetool.rules.patterns.PatternRuleLoader;
