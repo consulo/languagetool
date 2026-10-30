@@ -21,9 +21,9 @@
 
 package org.languagetool.tools;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import io.prometheus.client.Gauge;
-import lombok.Getter;
-import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Timer;
@@ -33,8 +33,8 @@ import java.util.concurrent.*;
 /**
  * ThreadPoolExecutor with some stopping logic for OOM and metrics tracking
  */
-@Slf4j
 class LtThreadPoolExecutor extends ThreadPoolExecutor {
+  private static final Logger log = LoggerFactory.getLogger(LtThreadPoolExecutor.class);
 
   private static final Gauge maxQueueSize = Gauge.build("languagetool_threadpool_max_queue_size", "Queue capacity by threadpool")
     .labelNames("pool").register();
@@ -43,7 +43,6 @@ class LtThreadPoolExecutor extends ThreadPoolExecutor {
   private static final Gauge largestPoolSize = Gauge.build("languagetool_threadpool_largest_queue_size", "The largest number of threads that have ever simultaneously been in the pool")
     .labelNames("pool").register();
 
-  @Getter
   private final String name;
 
   LtThreadPoolExecutor(String name, int corePoolSize, int maximumPoolSize, long keepAliveTime, @NotNull TimeUnit unit, @NotNull BlockingQueue<Runnable> workQueue, @NotNull ThreadFactory threadFactory, @NotNull RejectedExecutionHandler handler) {
@@ -92,5 +91,9 @@ class LtThreadPoolExecutor extends ThreadPoolExecutor {
   @Override
   protected void beforeExecute(Thread t, Runnable r) {
     super.beforeExecute(t, r);
+  }
+
+  public String getName() {
+    return name;
   }
 }

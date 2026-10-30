@@ -18,7 +18,8 @@
  */
 package org.languagetool;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.languagetool.markup.AnnotatedText;
 import org.languagetool.rules.Rule;
 
@@ -26,11 +27,11 @@ import java.lang.reflect.Constructor;
 import java.util.Arrays;
 import java.util.List;
 
-@Slf4j
 /**
  * Information about premium-only rules.
  */
 public abstract class Premium {
+  private static final Logger log = LoggerFactory.getLogger(Premium.class);
 
   private static final List<String> tempNotPremiumRules = Arrays.asList();
 

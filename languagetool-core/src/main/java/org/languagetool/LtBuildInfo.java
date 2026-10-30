@@ -20,7 +20,6 @@
 
 package org.languagetool;
 
-import lombok.Getter;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,13 +37,10 @@ public enum LtBuildInfo {
 
   private final Logger logger = LoggerFactory.getLogger(LtBuildInfo.class);
 
-  @Getter
   @Nullable
   private final String buildDate;
-  @Getter
   @Nullable
   private final String shortGitId;
-  @Getter
   @Nullable
   private final String version;
 
@@ -70,5 +66,20 @@ public enum LtBuildInfo {
       this.shortGitId = null;
       this.version = null;
     }
+  }
+
+  @Nullable
+  public String getBuildDate() {
+    return buildDate;
+  }
+
+  @Nullable
+  public String getShortGitId() {
+    return shortGitId;
+  }
+
+  @Nullable
+  public String getVersion() {
+    return version;
   }
 }

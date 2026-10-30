@@ -20,7 +20,6 @@ package org.languagetool.server;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-import lombok.Getter;
 
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -46,10 +45,8 @@ public class ExtendedUserInfo {
   public UUID groupId;
   public String groupRole;
 
-  @Getter
   public boolean opt_in_3rd_party_ai_grammar_checker;
 
-  @Getter
   public boolean opt_in_3rd_party_ai_paraphraser;
 
 
@@ -153,4 +150,12 @@ public class ExtendedUserInfo {
   }
 
 
+
+  public boolean isOpt_in_3rd_party_ai_grammar_checker() {
+    return opt_in_3rd_party_ai_grammar_checker;
+  }
+
+  public boolean isOpt_in_3rd_party_ai_paraphraser() {
+    return opt_in_3rd_party_ai_paraphraser;
+  }
 }

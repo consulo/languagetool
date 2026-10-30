@@ -20,7 +20,8 @@
 
 package org.languagetool.rules.spelling;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.jetbrains.annotations.NotNull;
 import org.languagetool.DetectedLanguage;
 import org.languagetool.Language;
@@ -33,8 +34,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-@Slf4j
 public class ForeignLanguageChecker {
+  private static final Logger log = LoggerFactory.getLogger(ForeignLanguageChecker.class);
 
   private static final float ERROR_THRESHOLD = 0.45f;
   private static final int MIN_SENTENCE_THRESHOLD = 3;

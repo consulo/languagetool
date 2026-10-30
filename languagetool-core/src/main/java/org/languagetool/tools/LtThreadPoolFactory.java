@@ -20,10 +20,11 @@
 
 package org.languagetool.tools;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import io.prometheus.client.Counter;
 import io.prometheus.client.Gauge;
-import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
@@ -32,8 +33,8 @@ import java.util.stream.Stream;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 
-@Slf4j
 public final class LtThreadPoolFactory {
+  private static final Logger log = LoggerFactory.getLogger(LtThreadPoolFactory.class);
   public static final String SERVER_POOL = "lt-server-thread";
   public static final String TEXT_CHECKER_POOL = "lt-text-checker-thread";
   public static final String REMOTE_RULE_EXECUTING_POOL = "remote-rule-executing-thread";

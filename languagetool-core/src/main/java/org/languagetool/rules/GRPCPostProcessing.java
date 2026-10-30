@@ -1,5 +1,7 @@
 package org.languagetool.rules;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import static org.languagetool.rules.GRPCRule.Connection.getManagedChannel;
 
 import java.util.ArrayList;
@@ -30,10 +32,9 @@ import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
 import io.grpc.ManagedChannel;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class GRPCPostProcessing {
+  private static final Logger log = LoggerFactory.getLogger(GRPCPostProcessing.class);
   public static final String CONFIG_TYPE = "grpc-post";
 
   private final CircuitBreaker circuitBreaker;

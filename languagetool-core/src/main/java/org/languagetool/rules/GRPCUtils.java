@@ -1,5 +1,7 @@
 package org.languagetool.rules;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
@@ -10,13 +12,12 @@ import org.languagetool.chunking.ChunkTag;
 import org.languagetool.rules.ml.MLServerProto;
 import org.languagetool.rules.ml.MLServerProto.Match;
 
-import lombok.extern.slf4j.Slf4j;
 import org.languagetool.tools.grpc.RuleData;
 
 import static org.languagetool.tools.grpc.ProtoHelper.*;
 
-@Slf4j
 public final class GRPCUtils {
+  private static final Logger log = LoggerFactory.getLogger(GRPCUtils.class);
 
   public static MLServerProto.AnalyzedToken toGRPC(AnalyzedToken token) {
       MLServerProto.AnalyzedToken.Builder t = MLServerProto.AnalyzedToken.newBuilder();

@@ -20,8 +20,8 @@
 
 package org.languagetool.tools.Cache;
 
-
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.jetbrains.annotations.NotNull;
 import org.languagetool.AnalyzedSentence;
 import org.languagetool.Premium;
@@ -38,8 +38,8 @@ import java.net.URL;
 import static org.languagetool.tools.grpc.ProtoHelper.getUrl;
 import static org.languagetool.tools.grpc.ProtoHelper.nullAsEmpty;
 
-@Slf4j
 public final class CacheUtils {
+  private static final Logger log = LoggerFactory.getLogger(CacheUtils.class);
 
   private CacheUtils() {
   }

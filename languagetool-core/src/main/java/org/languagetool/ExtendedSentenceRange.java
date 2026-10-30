@@ -20,18 +20,14 @@
 
 package org.languagetool;
 
-import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
 public final class ExtendedSentenceRange implements Comparable<ExtendedSentenceRange> {
 
-  @Getter
   private final int fromPos;
-  @Getter
   private final int toPos;
-  @Getter
   private final Map<String, Float> languageConfidenceRates; //languageCode;0-1 confidenceRate from LanguageDetectionService
 
   ExtendedSentenceRange(int fromPos, int toPos, String languageCode) {
@@ -72,5 +68,17 @@ public final class ExtendedSentenceRange implements Comparable<ExtendedSentenceR
   @Override
   public int compareTo(@NotNull ExtendedSentenceRange o) {
     return Integer.compare(this.fromPos, o.fromPos);
+  }
+
+  public int getFromPos() {
+    return fromPos;
+  }
+
+  public int getToPos() {
+    return toPos;
+  }
+
+  public Map<String, Float> getLanguageConfidenceRates() {
+    return languageConfidenceRates;
   }
 }

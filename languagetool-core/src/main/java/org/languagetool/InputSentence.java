@@ -18,7 +18,6 @@
  */
 package org.languagetool;
 
-import lombok.Getter;
 import org.languagetool.rules.CategoryId;
 
 import java.util.Collections;
@@ -32,7 +31,6 @@ import java.util.Set;
  */
 class InputSentence {
 
-  @Getter
   private final AnalyzedSentence analyzedSentence;
   private final Language lang;
   private final Language motherTongue;

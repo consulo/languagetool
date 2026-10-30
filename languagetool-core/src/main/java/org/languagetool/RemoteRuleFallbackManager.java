@@ -20,8 +20,9 @@
 
 package org.languagetool;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
-import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.TestOnly;
@@ -37,10 +38,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-@Slf4j
 public enum RemoteRuleFallbackManager {
 
   INSTANCE;
+  private static final Logger log = LoggerFactory.getLogger(RemoteRuleFallbackManager.class);
 
   private final AtomicBoolean initCalled = new AtomicBoolean(false);
 

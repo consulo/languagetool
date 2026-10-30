@@ -20,7 +20,6 @@ open module org.languagetool.server {
     requires jdk.httpserver;
     requires lettuce.core;
     requires logback.ecs.encoder;
-    requires static lombok;
     requires org.apache.commons.cli;
     requires org.apache.commons.codec;
     requires org.apache.commons.lang3;

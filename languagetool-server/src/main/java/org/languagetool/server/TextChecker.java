@@ -18,9 +18,10 @@
  */
 package org.languagetool.server;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.sun.net.httpserver.HttpExchange;
 import io.opentelemetry.api.common.Attributes;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -62,8 +63,8 @@ import static org.languagetool.server.ServerTools.*;
 /**
  * @since 3.4
  */
-@Slf4j
 abstract class TextChecker {
+  private static final Logger log = LoggerFactory.getLogger(TextChecker.class);
 
   private static final int PINGS_CLEAN_MILLIS = 60 * 1000;  // internal pings database will be cleaned this often
   private static final int PINGS_MAX_SIZE = 5000;

@@ -20,7 +20,8 @@
 
 package org.languagetool.language.identifier;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.languagetool.DetectedLanguage;
@@ -36,8 +37,8 @@ import java.util.regex.Pattern;
 
 import static org.languagetool.JLanguageTool.getDataBroker;
 
-@Slf4j
 public class SimpleLanguageIdentifier extends LanguageIdentifier {
+  private static final Logger log = LoggerFactory.getLogger(SimpleLanguageIdentifier.class);
 
   private static final Pattern WHITESPACE = Pattern.compile("\\s+");
 

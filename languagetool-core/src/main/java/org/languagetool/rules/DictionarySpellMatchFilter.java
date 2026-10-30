@@ -18,11 +18,12 @@
  */
 package org.languagetool.rules;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie;
-import lombok.extern.slf4j.Slf4j;
 import org.languagetool.UserConfig;
 import org.languagetool.markup.AnnotatedText;
 
@@ -35,8 +36,8 @@ import java.util.concurrent.TimeUnit;
  * Needed so words with spaces (i.e. phrases) can be added to a user's dictionary
  * without LT creating internal anti patterns for each phrase.
  */
-@Slf4j
 public class DictionarySpellMatchFilter implements RuleMatchFilter {
+  private static final Logger log = LoggerFactory.getLogger(DictionarySpellMatchFilter.class);
 
   private final UserConfig userConfig;
 

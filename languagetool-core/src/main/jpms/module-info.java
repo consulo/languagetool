@@ -26,7 +26,6 @@ open module org.languagetool.core {
     requires java.annotation;
     requires transitive java.xml;
     requires transitive language.detector;
-    requires static lombok;
     requires transitive lucene.core;
     requires micrometer.core;
     requires micrometer.registry.prometheus;

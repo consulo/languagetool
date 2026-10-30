@@ -19,7 +19,6 @@
 package org.languagetool.server;
 
 import com.google.common.base.Strings;
-import lombok.Getter;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -50,7 +49,6 @@ class UserLimits {
   private final Long requestsPerDay;
   private final LimitEnforcementMode limitEnforcementMode;
 
-  @Getter
   private JwtContent jwtContent;
 
   static UserLimits getDefaultLimits(HTTPServerConfig config) {
@@ -274,4 +272,8 @@ class UserLimits {
     }
   }
 
+
+  public JwtContent getJwtContent() {
+    return jwtContent;
+  }
 }

@@ -59,7 +59,7 @@ def generate():
                 for jar, module in mapping.items():
                     if Path(jar).parent.parent.name == dep:
                         requires.add(module)
-                        if scope == 'provided' or module in ('lombok', 'org.jetbrains.annotations'):
+                        if scope == 'provided' or module == 'org.jetbrains.annotations':
                             static.add(module)
         classes = directory / 'target/classes'
         cp_file = directory / 'target/jpms-classpath'
@@ -89,9 +89,6 @@ def generate():
             if 'org.jetbrains.annotations' in text:
                 requires.add('org.jetbrains.annotations')
                 static.add('org.jetbrains.annotations')
-            if 'lombok.' in text:
-                requires.add('lombok')
-                static.add('lombok')
         lines = ['// Maintained by tools/jpms/descriptors.py; see tools/jpms/README.md.',
                  'open module ' + name + ' {']
         for dependency in sorted(requires):

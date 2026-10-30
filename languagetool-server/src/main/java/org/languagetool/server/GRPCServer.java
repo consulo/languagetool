@@ -1,5 +1,7 @@
 package org.languagetool.server;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,12 +21,11 @@ import org.languagetool.rules.ml.ProcessingServerGrpc.ProcessingServerImplBase;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Experimental
 public class GRPCServer extends ProcessingServerImplBase
 {
+  private static final Logger log = LoggerFactory.getLogger(GRPCServer.class);
   private PipelinePool pool;
   private UserConfig userConfig;
   private GlobalConfig globalConfig;

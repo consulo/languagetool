@@ -18,7 +18,6 @@
  */
 package org.languagetool.server;
 
-import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -62,13 +61,10 @@ class UserInfoEntry {
   private final String groupRole;
 
   @Nullable
-  @Getter
   private final String defaultDictionary;
 
-  @Getter
   private final boolean opt_in_3rd_party_ai_grammar_checker;
 
-  @Getter
   private final boolean opt_in_3rd_party_ai_paraphraser;
 
   UserInfoEntry(long id, String email, @Nullable Long userDictCacheSize, @Nullable Long requestsPerDay, @Nullable Integer limitEnforcement, @Nullable Long managedAccounts,
@@ -110,7 +106,6 @@ class UserInfoEntry {
   Date getPremiumTo() {
     return premiumTo;
   }
-
 
   @Nullable
   Long getUserDictCacheSize() {
@@ -177,4 +172,16 @@ class UserInfoEntry {
     return groupRole;
   }
 
+  @Nullable
+  public String getDefaultDictionary() {
+    return defaultDictionary;
+  }
+
+  public boolean isOpt_in_3rd_party_ai_grammar_checker() {
+    return opt_in_3rd_party_ai_grammar_checker;
+  }
+
+  public boolean isOpt_in_3rd_party_ai_paraphraser() {
+    return opt_in_3rd_party_ai_paraphraser;
+  }
 }

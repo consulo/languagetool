@@ -18,8 +18,9 @@
  */
 package org.languagetool.server;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.sun.net.httpserver.HttpServer;
-import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.Nullable;
 import org.languagetool.JLanguageTool;
 import org.languagetool.tools.LtThreadPoolFactory;
@@ -37,8 +38,8 @@ import static org.languagetool.server.HTTPServerConfig.DEFAULT_PORT;
  *
  * @since 2.0
  */
-@Slf4j
 abstract class Server {
+  private static final Logger log = LoggerFactory.getLogger(Server.class);
 
   protected abstract String getProtocol();
 

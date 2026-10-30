@@ -18,7 +18,6 @@
  */
 package org.languagetool;
 
-import lombok.Getter;
 import org.languagetool.rules.Rule;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -67,16 +66,12 @@ public class UserConfig {
   private final Long textSessionId;
   private final List<String> abTest;
   private final String preferredLanguages;
-  @Getter
   private boolean trustedSource;
 
-  @Getter
   private boolean optInThirdPartyAI;
 
-  @Getter
   private boolean isPremium;
 
-  @Getter
   private final TokenType tokenType;
   private final boolean suggestionsEnabled;
 
@@ -381,5 +376,21 @@ public class UserConfig {
   @NotNull
   public List<String> getPreferredLanguages() {
     return Arrays.asList(preferredLanguages.split(","));
+  }
+
+  public boolean isTrustedSource() {
+    return trustedSource;
+  }
+
+  public boolean isOptInThirdPartyAI() {
+    return optInThirdPartyAI;
+  }
+
+  public boolean isPremium() {
+    return isPremium;
+  }
+
+  public TokenType getTokenType() {
+    return tokenType;
   }
 }

@@ -20,13 +20,11 @@
 
 package org.languagetool;
 
-import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 import java.util.TreeSet;
 
-@Getter
 public class LevelToneTagCacheKey {
 
   private final JLanguageTool.Level level;
@@ -55,5 +53,13 @@ public class LevelToneTagCacheKey {
     int result = getLevel().hashCode();
     result = 31 * result + getToneTags().hashCode();
     return result;
+  }
+
+  public JLanguageTool.Level getLevel() {
+    return level;
+  }
+
+  public Set<ToneTag> getToneTags() {
+    return toneTags;
   }
 }

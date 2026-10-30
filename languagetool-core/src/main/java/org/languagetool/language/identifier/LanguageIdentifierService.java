@@ -20,7 +20,8 @@
 
 package org.languagetool.language.identifier;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.TestOnly;
 import org.languagetool.Languages;
@@ -28,10 +29,10 @@ import org.languagetool.Languages;
 import java.io.File;
 import java.util.List;
 
-@Slf4j
 public enum LanguageIdentifierService {
 
   INSTANCE;
+  private static final Logger log = LoggerFactory.getLogger(LanguageIdentifierService.class);
 
   private LanguageIdentifier defaultIdentifier = null;
   private LanguageIdentifier simpleIdentifier = null;

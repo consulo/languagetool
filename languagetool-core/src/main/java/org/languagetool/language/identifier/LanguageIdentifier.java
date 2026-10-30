@@ -21,7 +21,6 @@
 package org.languagetool.language.identifier;
 
 import com.optimaize.langdetect.text.TextFilter;
-import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.languagetool.DetectedLanguage;
@@ -155,14 +154,20 @@ public abstract class LanguageIdentifier {
   }
 
   protected static class ParsedLanguageLists {
-    @Getter
     private final List<String> additionalLangs = new ArrayList<>();
-    @Getter
     private final List<String> preferredLangs = new ArrayList<>();
 
     public ParsedLanguageLists(List<String> additionalLangs, List<String> preferredLangs) {
       this.additionalLangs.addAll(additionalLangs);
       this.preferredLangs.addAll(preferredLangs);
+    }
+
+    public List<String> getAdditionalLangs() {
+      return additionalLangs;
+    }
+
+    public List<String> getPreferredLangs() {
+      return preferredLangs;
     }
   }
 }

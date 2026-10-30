@@ -18,8 +18,9 @@
  */
 package org.languagetool.server;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.sun.net.httpserver.HttpServer;
-import lombok.extern.slf4j.Slf4j;
 import org.languagetool.JLanguageTool;
 import org.languagetool.tools.Tools;
 
@@ -43,8 +44,8 @@ import static org.languagetool.server.HTTPServerConfig.DEFAULT_HOST;
  * @author Daniel Naber
  * @author Ankit
  */
-@Slf4j
 public class HTTPServer extends Server {
+  private static final Logger log = LoggerFactory.getLogger(HTTPServer.class);
 
   private final ThreadPoolExecutor executorService;
 

@@ -18,7 +18,6 @@
  */
 package org.languagetool;
 
-import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 import org.languagetool.rules.RuleMatch;
 
@@ -30,11 +29,8 @@ import java.util.stream.Collectors;
  */
 public class CheckResults {
 
-  @Getter
   private List<RuleMatch> ruleMatches;
-  @Getter
   private final List<Range> ignoredRanges;
-  @Getter
   private final List<ExtendedSentenceRange> extendedSentenceRanges;
   private final List<SentenceRange> sentenceRanges = new ArrayList<>();
 
@@ -63,5 +59,17 @@ public class CheckResults {
 
   public void setRuleMatches(List<RuleMatch> ruleMatches) {
     this.ruleMatches = Objects.requireNonNull(ruleMatches);
+  }
+
+  public List<RuleMatch> getRuleMatches() {
+    return ruleMatches;
+  }
+
+  public List<Range> getIgnoredRanges() {
+    return ignoredRanges;
+  }
+
+  public List<ExtendedSentenceRange> getExtendedSentenceRanges() {
+    return extendedSentenceRanges;
   }
 }

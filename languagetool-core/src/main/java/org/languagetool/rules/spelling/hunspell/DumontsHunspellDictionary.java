@@ -18,6 +18,8 @@
  */
 package org.languagetool.rules.spelling.hunspell;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import dumonts.hunspell.Hunspell;
 
 import java.io.IOException;
@@ -25,17 +27,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
-import lombok.Getter;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class DumontsHunspellDictionary implements HunspellDictionary {
+  private static final Logger log = LoggerFactory.getLogger(DumontsHunspellDictionary.class);
   private final Hunspell hunspell;
   private final Path dictionaryPath;
   private final Path affixPath;
-  @Getter
   private final boolean deleteOnClose;
-  @Getter
   private boolean closed = false;
 
   public DumontsHunspellDictionary(Path dictionary, Path affix) {
@@ -97,5 +95,13 @@ public class DumontsHunspellDictionary implements HunspellDictionary {
         log.trace("Failed to delete temporary Hunspell files: {} and {}", dictionaryPath, affixPath, e);
       }
     }
+  }
+
+  public boolean isDeleteOnClose() {
+    return deleteOnClose;
+  }
+
+  public boolean isClosed() {
+    return closed;
   }
 }

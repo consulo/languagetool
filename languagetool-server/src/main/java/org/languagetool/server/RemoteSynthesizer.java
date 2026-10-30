@@ -1,5 +1,7 @@
 package org.languagetool.server;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,7 +15,6 @@ import java.util.regex.PatternSyntaxException;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.cli.*;
 import org.languagetool.AnalyzedToken;
 import org.languagetool.AnalyzedTokenReadings;
@@ -23,8 +24,8 @@ import org.languagetool.grpc.SynthesizeServerGrpc;
 import org.languagetool.rules.GRPCUtils;
 import org.languagetool.synthesis.Synthesizer;
 
-@Slf4j
 public class RemoteSynthesizer extends SynthesizeServerGrpc.SynthesizeServerImplBase {
+  private static final Logger log = LoggerFactory.getLogger(RemoteSynthesizer.class);
 
   protected List<String> synthesize(String languageCode, String lemma, String postag, boolean postagRegexp)
       throws IOException {

@@ -1,5 +1,7 @@
 package org.languagetool.rules.spelling.hunspell;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
@@ -10,13 +12,12 @@ import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.languagetool.JLanguageTool;
 import org.languagetool.broker.ResourceDataBroker;
 
-@Slf4j
 public final class Hunspell {
+  private static final Logger log = LoggerFactory.getLogger(Hunspell.class);
   private record PathPair(Path dictionary, Path affix) {
       private PathPair(Path dictionary, Path affix) {
         this.dictionary = Objects.requireNonNull(dictionary);
