@@ -1300,7 +1300,7 @@
                     <version>${maven-surefire-plugin.version}</version>
                     <configuration>
                         <trimStackTrace>false</trimStackTrace>
-                        <argLine>-Xms256m -Xmx3372m</argLine>
+                        <argLine>-Xms256m -Xmx3372m -Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0 -Djdk.xml.entityExpansionLimit=0</argLine>
                         <!--<runOrder>failedfirst</runOrder>-->
                         <excludes>
                             <exclude>**/*ConcurrencyTest.java</exclude>
