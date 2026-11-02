@@ -193,6 +193,21 @@ public final class Languages {
   }
 
   /**
+   * Remove a language added by {@link #getOrAddLanguageByClassName(String)} or {@link #addLanguage(String, String, File)},
+   * e.g. when the plugin which provides it is unloaded. Languages found in the classpath on startup are not removed.
+   *
+   * @param language the registered Language object
+   * @return {@code true} if the language was removed
+   */
+  public static boolean removeLanguage(Language language) {
+    if (!dynLanguages.removeIf(it -> it == language)) {
+      return false;
+    }
+    staticAndDynamicLanguages.removeIf(it -> it == language);
+    return true;
+  }
+
+  /**
    * Get the Language object for the given language name.
    *
    * @param languageName e.g. <code>English</code> or <code>German</code> (case is significant)

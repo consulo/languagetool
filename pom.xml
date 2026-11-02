@@ -104,7 +104,7 @@
     </scm>
 
     <properties>
-        <revision>6.9.3</revision>
+        <revision>6.9.4</revision>
         <!-- Jenkins' embedded Maven does not set the command-line launcher's root property. -->
         <jpms.project.root>${session.executionRootDirectory}</jpms.project.root>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

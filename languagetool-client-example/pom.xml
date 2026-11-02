@@ -24,7 +24,7 @@
         <dependency>
             <groupId>consulo.internal.org.languagetool</groupId>
             <artifactId>language-all</artifactId>
-            <version>6.9.3</version>
+            <version>6.9.4</version>
         </dependency>
     </dependencies>
 
